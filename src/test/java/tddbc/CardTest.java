@@ -41,7 +41,6 @@ public class CardTest {
 
     }
 
-
     @Nested
     class カードの比較 {
 
