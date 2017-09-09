@@ -6,17 +6,17 @@ package tddbc;
  */
 public class Card {
 
-    private String suit;
+    private Suit suit;
 
-    private String rank;
+    private Rank rank;
 
-    public Card(String suit, String rank) {
+    public Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
     }
 
     public String getNotation() {
 
-        return rank + suit;
+        return rank.rank + suit.suit;
     }
 }

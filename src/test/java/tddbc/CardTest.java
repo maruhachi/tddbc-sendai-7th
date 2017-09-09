@@ -13,7 +13,9 @@ public class CardTest {
     @Test
     public void カードの生成() throws Exception {
         // 実行
-        Card card = new Card("♠", "3");
+        Suit suit = new Suit("♠");
+        Rank rank = new Rank("3");
+        Card card = new Card(suit, rank);
 
         // 検証
         assertEquals("3♠", card.getNotation());
