@@ -10,8 +10,9 @@ public class Cards {
         this.second = second;
     }
 
-    public String getHands() {
-        if (first.hasSameRank(second)) return "ペア";
-        return "";
+    public Hand getHand() {
+        if (first.hasSameRank(second)) return Hand.PAIR;
+        if (first.hasSameSuit(second)) return Hand.FLUSH;
+        return Hand.HIGH_CARD;
     }
 }
