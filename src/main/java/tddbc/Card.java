@@ -17,10 +17,14 @@ public class Card {
 
     public String getNotation() {
 
-        return rank.rank + suit.suit;
+        return rank.getNotation() + suit.getNotation();
     }
 
     public boolean hasSameSuit(Card other) {
         return suit.isSame(other.suit);
+    }
+
+    public boolean hasSameRank(Card other) {
+        return rank.isSame(other.rank);
     }
 }

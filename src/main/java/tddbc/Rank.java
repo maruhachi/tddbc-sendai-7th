@@ -5,9 +5,18 @@ package tddbc;
  * @since 2017/09/09
  */
 public class Rank {
-    String rank;
 
-    public Rank(String s) {
-        this.rank = s;
+    private String rank;
+
+    public Rank(String value) {
+        this.rank = value;
+    }
+
+    public String getNotation(){
+        return rank;
+    }
+
+    public boolean isSame(Rank other) {
+        return rank.equals(other.rank);
     }
 }

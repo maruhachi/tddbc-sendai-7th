@@ -6,10 +6,14 @@ package tddbc;
  */
 public class Suit {
 
-    String suit;
+    private String suit;
 
-    public Suit(String s) {
-        this.suit = s;
+    public Suit(String value) {
+        this.suit = value;
+    }
+
+    public String getNotation() {
+        return suit;
     }
 
     public boolean isSame(Suit other) {
