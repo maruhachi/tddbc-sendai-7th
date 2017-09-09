@@ -19,4 +19,8 @@ public class Card {
 
         return rank.rank + suit.suit;
     }
+
+    public boolean hasSameSuit(Card other) {
+        return suit.isSame(other.suit);
+    }
 }

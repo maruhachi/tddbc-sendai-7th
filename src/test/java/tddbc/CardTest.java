@@ -21,4 +21,28 @@ public class CardTest {
         assertEquals("3♠", card.getNotation());
     }
 
+    @Test
+    public void カードの比較_同じスートの比較() throws Exception {
+        Card threeOfSpades = new Card(new Suit("♠"), new Rank("3")); // スペードの3
+        Card aceOfSpades = new Card(new Suit("♠"), new Rank("A")); // スペードのA
+
+        assertTrue(threeOfSpades.hasSameSuit(aceOfSpades));
+    }
+
+    @Test
+    public void カードの比較_異なるスートの比較() throws Exception {
+        Card threeOfSpades = new Card(new Suit("♠"), new Rank("3")); // スペードの3
+        Card aceOfHearts = new Card(new Suit("♥"), new Rank("A")); // ハートのA
+
+        assertFalse(threeOfSpades.hasSameSuit(aceOfHearts));
+    }
+
+    @Test
+    public void カードの比較_異なるランクの比較() throws Exception {
+        Card threeOfSpades = new Card(new Suit("♠"), new Rank("3")); // スペードの3
+        Card aceOfSpades = new Card(new Suit("♠"), new Rank("A")); // スペードのA
+
+        assertTrue(threeOfSpades.hasSameSuit(aceOfSpades));
+    }
+
 }

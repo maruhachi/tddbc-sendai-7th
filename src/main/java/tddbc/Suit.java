@@ -11,4 +11,8 @@ public class Suit {
     public Suit(String s) {
         this.suit = s;
     }
+
+    public boolean isSame(Suit other) {
+        return suit.equals(other.suit);
+    }
 }
