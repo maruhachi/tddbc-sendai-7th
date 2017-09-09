@@ -47,7 +47,7 @@ public class CardTest {
 
         Card threeOfSpades = new Card(new Suit("♠"), new Rank("3")); // スペードの3
         Card aceOfSpades = new Card(new Suit("♠"), new Rank("A")); // スペードのA
-        Card aceOfHearts = new Card(new Suit("♥"), new Rank("A")); // ハートのA
+        Card threeOfHearts = new Card(new Suit("♥"), new Rank("3")); // ハートの3
 
         @Test
         @DisplayName("スペードの3とスペードのAは同じスートを持つ")
@@ -56,15 +56,15 @@ public class CardTest {
         }
 
         @Test
-        @DisplayName("スペードの3とハートのAは異なるスートを持つ")
+        @DisplayName("スペードの3とハートの3は異なるスートを持つ")
         public void 異なるスートの比較() throws Exception {
-            assertFalse(threeOfSpades.hasSameSuit(aceOfHearts));
+            assertFalse(threeOfSpades.hasSameSuit(threeOfHearts));
         }
 
         @Test
-        @DisplayName("ハートのエースとスペードのAは同じランクを持つ")
+        @DisplayName("スペードの3とハートの3は同じランクを持つ")
         public void 同じランクの比較() throws Exception {
-            assertTrue(aceOfHearts.hasSameRank(aceOfSpades));
+            assertTrue(threeOfSpades.hasSameRank(threeOfHearts));
         }
 
         @Test
