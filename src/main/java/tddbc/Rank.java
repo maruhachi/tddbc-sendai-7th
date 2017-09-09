@@ -16,7 +16,7 @@ public class Rank {
         return rank;
     }
 
-    public boolean isSame(Rank other) {
-        return rank.equals(other.rank);
+    public boolean isSame(Rank another) {
+        return rank.equals(another.rank);
     }
 }

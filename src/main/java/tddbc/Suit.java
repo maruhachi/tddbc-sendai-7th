@@ -4,19 +4,24 @@ package tddbc;
  * @author ykonno
  * @since 2017/09/09
  */
-public class Suit {
+public enum Suit {
 
-    private String suit;
+    Spades("♠"),
+    Hearts("♥"),
+    Diamonds("◆"),
+    Clubs("♣");
 
-    public Suit(String value) {
-        this.suit = value;
+    private String value;
+
+    Suit(String value) {
+        this.value = value;
     }
 
     public String getNotation() {
-        return suit;
+        return value;
     }
 
-    public boolean isSame(Suit other) {
-        return suit.equals(other.suit);
+    public boolean isSame(Suit another) {
+        return this == another;
     }
 }
